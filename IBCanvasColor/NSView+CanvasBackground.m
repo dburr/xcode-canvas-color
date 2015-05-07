@@ -19,7 +19,8 @@
 
 - (void)is_drawRect:(NSRect)dirtyRect
 {
-	[[NSColor colorWithWhite:0.95f alpha:1.0f] set];
+    // original was 0.85f, dark gray = 0.55f, 0.75f seems to be a good compromise
+	[[NSColor colorWithWhite:0.75f alpha:1.0f] set];
 	
 	[self foreachRectBeingDrawn:^(CGRect rect) {
 		NSRectFill(rect);
