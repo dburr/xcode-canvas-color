@@ -16,8 +16,8 @@ Xcode doesn't have an official plugin API and this plugin won't be loaded for ne
 
 Here are the steps to do this manually:
 
-# In Finder, right click Xcode.app and click Show Package Contents
-# Copy the Contents/Info.plist file to a temporary location (e.g. /tmp)
-# Use the `plutil` command to convert it into a human-readable format: `plutil -convert xml1 /tmp/Info.plist`
-# Open the converted plist file in a text editor and copy the value of the DVTPlugInCompatibilityUUID key
-# Add the value to the array called DVTPlugInCompatibilityUUIDs inside the plugin's Info.plist
+* In Finder, right click Xcode.app and click Show Package Contents
+* Copy the Contents/Info.plist file to a temporary location (e.g. /tmp)
+* Use the `plutil` command to convert it into a human-readable format: `plutil -convert xml1 /tmp/Info.plist`
+* Open the converted plist file in a text editor and copy the value of the DVTPlugInCompatibilityUUID key
+* Add the value to the array called DVTPlugInCompatibilityUUIDs inside the plugin's Info.plist
